@@ -1,0 +1,146 @@
+.navbar__menu li:hover{
+    border-bottom: 1.5px solid #d9dde6;
+    transition: all 50ms ease;
+}
+
+.image-upload input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.upload-field {
+  display: block;
+  background: silver;
+  padding: 12px;
+  border-radius: 11px;
+
+}
+
+.upload-field .file-thumbnail {
+  cursor: pointer;
+  border: 1px dashed #BBD9EC;
+  border-radius: 11px;
+  text-align: center;
+  padding: 20px;
+}
+
+.upload-field .file-thumbnail img {
+  width: 50px;
+}
+
+.upload-field .file-thumbnail h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.accordion{
+	width: 100%;
+	max-width: 1000px;
+}
+.rotate-arrow{
+    transition: all 500ms;
+    transform: rotate(180deg);
+}
+.accordion-item{
+	color: #111;
+	margin: 2rem 0;
+	border-radius: 0.5rem;
+	/* box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25); */
+}
+/* .accordion-item-header{
+	padding: 0.5rem 3rem 0.5rem 1rem;
+	min-height: 3.5rem;
+	line-height: 1.25rem;
+    font-size: 15px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+} */
+/* .accordion-item-header::after{
+	content: "\002B";
+	font-size: 2rem;
+	position: absolute;
+	right: 1rem;
+	transition: transform 0.4s ease-in-out;
+}
+.accordion-item-header.active::after{
+	/*content: "\2212";*/
+
+	/*transform: rotate(135deg);
+} */
+.accordion-item-body{
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content{
+	line-height: 1.5rem;
+    border-top: 1px solid #808080;
+	/* border-top: 1px solid;
+	border-image: linear-gradient(to right, transparent, #34495e, transparent) 1; */
+}
+
+
+@media screen and (max-width: 768px){ 
+    .navbar__menu{
+        position: absolute;
+        top: -150rem;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: -1 ;
+
+    }
+
+    .navbar__menu li, .signIn{
+        margin: 20px 0;
+    }
+    .navbar__menu.active {
+        background-color: #0d1118;;
+        top: 3.5rem;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: auto;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .navbar__toggle .bar { 
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+
+    #mobile-menu {
+        position: absolute;
+        top: 2%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity : 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
